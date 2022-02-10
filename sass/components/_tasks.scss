@@ -1,0 +1,46 @@
+.tasks {
+  padding-bottom: 94px;
+}
+
+.tasks__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--titles-color);
+  margin-bottom: 50px;
+}
+
+.tasks-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks-list__item {
+  position: relative;
+}
+
+.tasks-list__text {
+  position: absolute;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  top: 224px;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: rgba(
+    47,
+    48,
+    58,
+    0.8
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
