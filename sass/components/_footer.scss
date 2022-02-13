@@ -1,29 +1,54 @@
 .footer {
+  width: 100%;
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .footer-main-box {
-  display: flex;
+  @include desk {
+    display: flex;
+  }
 }
 
-.footer-main-box__box1 {
-  margin-right: 70px;
+.footer-box {
+  box-sizing: content-box;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-boxes-wrap {
+  @include tab {
+    display: flex;
+  }
 }
 
 .footer__logo {
   display: block;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  @include desk {
+    display: block;
+  }
 }
 
 .footer-contacts {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  @include desk {
+    display: block;
+  }
 }
 
 .footer-contacts__item {
-  margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  @include desk {
+    margin-bottom: 9px;
+  }
 }
 
 .footer-contacts__location {
@@ -43,11 +68,24 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  @include desk {
+    display: block;
+  }
 }
 
 .footer-main-box__box2 {
-  margin-top: 12px;
-  margin-right: 93px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @include tab {
+    margin-top: 5px;
+  }
+  @include desk {
+    margin-left: 70px;
+    margin-top: 12px;
+    margin-right: 93px;
+  }
 }
 
 .footer-box2__title {
@@ -58,6 +96,8 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-box2-list {
@@ -97,7 +137,12 @@
 }
 
 .footer-main-box__box3 {
-  margin-top: 12px;
+  @include tab {
+    margin-top: 60px;
+  }
+  @include desk {
+    margin-top: 12px;
+  }
 }
 
 .footer-form {
@@ -114,14 +159,24 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  @include desk {
+    display: block;
+  }
 }
 
 .footer-form-wrap {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include desk {
+    flex-direction: row;
+  }
 }
 
 .footer-form-wrap__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid
     rgba(255, 255, 255, 0.3);
@@ -132,6 +187,7 @@
   border-radius: 4px;
   background-color: inherit;
   padding-left: 16px;
+  margin-bottom: 20px;
   &:placeholder-shown,
   & {
     font-size: 16px;
@@ -140,6 +196,14 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.9);
     outline: 0;
+  }
+  @include tab {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include desk {
+    width: 358px;
   }
 }
 
@@ -153,10 +217,13 @@
   border-radius: 4px;
   display: flex;
   align-items: center;
-  text-align: center;
   padding-left: 29px;
   padding-right: 28px;
-  margin-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  @include desk {
+    margin-left: 12px;
+  }
 }
 
 .footer-form-btn__text {
