@@ -1,5 +1,9 @@
 .tasks {
+  display: none;
   padding-bottom: 94px;
+  @include desk {
+    display: block;
+  }
 }
 
 .tasks__title {
