@@ -19,13 +19,7 @@
     <style>
         /* width */
         ::-webkit-scrollbar {
-            width: 17px;
-        }
-    
-        /* Track */
-        ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px #7c7c7cc2;
-            border-radius: 5px;
+            width: 10px;
         }
     
         /* Handle */
@@ -64,6 +58,45 @@
                     </svg>+38 096 111 11 11
                 </a>
             </div>
+<!-- MOBMENU -->
+            <button type="button" class="menu-open-btn" data-menu-open>
+                <svg class="menu__icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="mob-menu is-hidden" data-menu>
+                <div class="container menu-container">
+                    <div class="menu-wrap1">
+                        <button class="mob-menu-close-btn" data-menu-close>
+                            <svg class="menu__icon-close" width="40" height="40">
+                                <use href="./images/icons.svg#icon-menu-close"></use>
+                            </svg>
+                        </button>
+                        <ul class="list menu-list">
+                            <li class="menu-list__item"><a class="link menu-list__link current-page" href="./index.html">Студия</a></li>
+                            <li class="menu-list__item"><a class="link menu-list__link" href="./portfolio.html">Портфолио</a></li>
+                            <li class="menu-list__item"><a class="link menu-list__link" href="">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-wrap2">
+                        <div class="menu-contacts">
+                            <a class="link menu-tel menu-contacts__item" href="tel:+380961111111">+38 096 111 11 11
+                            </a>
+                            <a class="link menu-mail menu-contacts__item" href="mailto:info@devstudio.com">info@devstudio.com
+                            </a>
+                        </div>
+                        <div class="menu-social">
+                            <ul class="menu-social-list list">
+                                <li class="menu-social__item"><a class="menu-social__link link" href="">Instagram</a></li>
+                                <li class="menu-social__item"><a class="menu-social__link link" href="">Twitter</a></li>
+                                <li class="menu-social__item"><a class="menu-social__link link" href="">Facebook</a></li>
+                                <li class="menu-social__item"><a class="menu-social__link link" href="">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./js/menu.js"></script>
         </div>
     </header>
     <main class="main">
@@ -119,10 +152,28 @@
             <div class="container">
                 <h2 class="tasks__title">Чем мы занимаемся</h2>
                 <ul class="list tasks-list" >
-                    <li class="tasks-list__item"><img src="./images/webstudio.1.1.jpeg" alt="програмист пишет код" width="370" 
-                    class="tasks-list__pic"><h3 class="tasks-list__text">Десктопные приложения</h3></li>
-                    <li class="tasks-list__item"><img src="./images/webstudio.1.2.jpeg" alt="програмист разрабатывает приложение" width="370" class="tasks-list__pic"><h3 class="tasks-list__text">Мобильные приложения</h3></li>
-                    <li class="tasks-list__item"><img src="./images/webstudio.1.3.jpeg" alt="програмист выбирает цвет" width="370" class="tasks-list__pic"><h3 class="tasks-list__text">Дизайнерские решения</h3></li>
+                    <li class="tasks-list__item">
+                        <img
+                        srcset="./images/gallery-1-1x.jpeg  1x,
+                        ./images/gallery-1-2x.jpeg  2x"
+                        src="./images/gallery-1-1x.jpeg" alt="програмист пишет код" width="370" 
+                        class="tasks-list__pic">
+                        <h3 class="tasks-list__text">Десктопные приложения</h3>
+                    </li>
+                    <li class="tasks-list__item">
+                        <img 
+                        srcset="./images/gallery-2-1x.jpeg  1x,
+                        ./images/gallery-2-2x.jpeg  2x"
+                        src="./images/gallery-2-1x.jpeg" alt="програмист разрабатывает приложение" width="370" class="tasks-list__pic">
+                        <h3 class="tasks-list__text">Мобильные приложения</h3>
+                    </li>
+                    <li class="tasks-list__item">
+                        <img 
+                        srcset="./images/gallery-3-1x.jpeg  1x,
+                        ./images/gallery-3-2x.jpeg  2x"
+                        src="./images/gallery-3-1x.jpeg" alt="програмист выбирает цвет" width="370" class="tasks-list__pic">
+                        <h3 class="tasks-list__text">Дизайнерские решения</h3>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -131,7 +182,10 @@
             <h2 class="team__title">Наша команда</h2>
             <ul class="list team-list" >
                 <li class="team-list__item">
-                    <img src="./images/web-worker1-min.jpeg" alt="работник 1" width="270" class="team-list__pic">
+                    <img 
+                    srcset="./images/worker-1-desk-1x.jpeg 1x, 
+                    ./images/worker-1-desk-2x.jpeg 2x" 
+                    src="./images/worker-1-desk-1x.jpeg" alt="работник 1" width="270" class="team-list__pic">
                     <div class="team-list-discription">
                         <h3 class="team-list-discription__title">Игорь Демьяненко</h3>
                         <p lang="en" class="team-list-discription__text">Product Designer</p>
@@ -160,7 +214,10 @@
                     </div>
                 </li>
                 <li class="team-list__item">
-                    <img src="./images/web-worker2-min.jpeg" alt="работник 2" width="270" class="team-list__pic">
+                    <img 
+                    srcset="./images/worker-2-desk-1x.jpeg 1x, 
+                    ./images/worker-2-desk-2x.jpeg 2x" 
+                    src="./images/web-worker2-min.jpeg" alt="работник 2" width="270" class="team-list__pic">
                     <div class="team-list-discription">
                         <h3 class="team-list-discription__title">Ольга Репина</h3>
                         <p lang="en" class="team-list-discription__text">Frontend Developer</p>
@@ -189,7 +246,10 @@
                     </div>
                 </li>
                 <li class="team-list__item">
-                    <img src="./images/web-worker3-min.jpeg" alt="работник 3" width="270" class="team-list__pic">
+                    <img 
+                    srcset="./images/worker-3-desk-1x.jpeg 1x, 
+                    ./images/worker-3-desk-2x.jpeg 2x" 
+                    src="./images/web-worker3-min.jpeg" alt="работник 3" width="270" class="team-list__pic">
                     <div class="team-list-discription">
                         <h3 class="team-list-discription__title">Николай Тарасов</h3>
                         <p lang="en" class="team-list-discription__text">Marketing</p>
@@ -218,7 +278,10 @@
                     </div>
                 </li>
                 <li class="team-list__item">
-                    <img src="./images/web-worker4-min.jpeg" alt="работник 4" width="270" class="team-list__pic">
+                    <img 
+                    srcset="./images/worker-4-desk-1x.jpeg 1x, 
+                    ./images/worker-4-desk-2x.jpeg 2x" 
+                    src="./images/web-worker4-min.jpeg" alt="работник 4" width="270" class="team-list__pic">
                     <div class="team-list-discription">
                         <h3 class="team-list-discription__title">Михаил Ермаков</h3>
                         <p lang="en" class="team-list-discription__text">UI Designer</p>
@@ -306,7 +369,8 @@
     </main>
     <footer class="footer">
         <div class="container footer-main-box">
-            <div class="footer-box1 footer-main-box__box1">
+            <div class="footer-boxes-wrap">
+            <div class="footer-box footer-main-box__box1">
                 <a class="link footer__logo logo" href="./index.html">Web<span style="color: #ffffff;">Studio</span></a>
                 <address class="footer-contacts">
                     <a class="link footer-contacts__location footer-contacts__item" href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4281777,30.5292931,14.41z/data=!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru" target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
@@ -314,19 +378,19 @@
                     <a class="link footer-contacts__tel" href="tel:+38099111111">+38 099 111 11 11</a>
                 </address>
             </div>        
-            <div class="footer-box2 footer-main-box__box2">
-                <h3 class="footer-box2__title">присоединяйтесь</h3>
-                <ul class="footer-box2-list list">
-                    <li class="footer-box2-list__item"><a href="" class="footer-box2-list__link">
-                        <svg class="footer-box2-list__icon" width="20" height="20">
-                            <use href="./images/icons.svg#icon-worker-instagram"></use>
-                        </svg>
-                    </a></li>
-                    <li class="footer-box2-list__item"><a href="" class="footer-box2-list__link">
-                        <svg class="footer-box2-list__icon" width="20" height="20">
-                            <use href="./images/icons.svg#icon-worker-twitter"></use>
-                        </svg>
-                    </a></li>
+                <div class="footer-box footer-main-box__box2">
+                    <h3 class="footer-box2__title">присоединяйтесь</h3>
+                    <ul class="footer-box2-list list">
+                        <li class="footer-box2-list__item"><a href="" class="footer-box2-list__link">
+                            <svg class="footer-box2-list__icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-worker-instagram"></use>
+                            </svg>
+                        </a></li>
+                        <li class="footer-box2-list__item"><a href="" class="footer-box2-list__link">
+                            <svg class="footer-box2-list__icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-worker-twitter"></use>
+                            </svg>
+                        </a></li>
                     <li class="footer-box2-list__item"><a href="" class="footer-box2-list__link">
                         <svg class="footer-box2-list__icon" width="20" height="20">
                             <use href="./images/icons.svg#icon-worker-facebook"></use>
@@ -339,7 +403,8 @@
                     </a></li>
                 </ul>
             </div>
-            <div class="footer-box3 footer-main-box__box3">
+            </div>
+            <div class="footer-box footer-main-box__box3">
                 <form action="#" name="subscribing_form" class="footer-form">
                     <label for="subscriber-email" class="footer-form__label">Подпишитесь на рассылку</label>
                     <div class="footer-form-wrap">
