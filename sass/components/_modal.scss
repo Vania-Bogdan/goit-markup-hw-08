@@ -6,6 +6,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 2500ms,
     visibility 2500ms;
+  display: flex;
+  align-items: center;
 }
 
 .backdrop.is-hidden {
@@ -29,7 +31,7 @@
 
 .modal {
   position: relative;
-  top: 10px;
+  // top: 10px;
   left: 50%;
   transition: transform 1500ms,
     background-color 1500ms;
