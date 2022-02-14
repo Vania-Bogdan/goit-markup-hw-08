@@ -58,6 +58,10 @@
 .header-mail {
   @include tab {
     display: block;
+    margin-right: 0;
+  }
+  @include desk {
+    margin-right: 30px;
   }
 }
 
@@ -86,9 +90,12 @@
     background-color: var(
       --accent-color
     );
-    bottom: -32px;
+    bottom: -35px;
     left: 0;
     border-radius: 2px;
+    @include desk {
+      bottom: -30px;
+    }
   }
 }
 
@@ -141,7 +148,10 @@
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  padding: 48px 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: auto;
+  padding-right: auto;
   @include tab {
     display: none;
   }
