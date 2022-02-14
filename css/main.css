@@ -143,6 +143,13 @@ img {
 @media screen and (min-width: 768px) {
   .header-mail {
     display: block;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-mail {
+    margin-right: 30px;
   }
 }
 
@@ -170,9 +177,15 @@ img {
   height: 4px;
   position: absolute;
   background-color: var(--accent-color);
-  bottom: -32px;
+  bottom: -35px;
   left: 0;
   border-radius: 2px;
+}
+
+@media screen and (min-width: 1200px) {
+  .current::after {
+    bottom: -30px;
+  }
 }
 
 .header-contacts {
@@ -227,7 +240,10 @@ img {
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  padding: 48px 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: auto;
+  padding-right: auto;
 }
 
 @media screen and (min-width: 768px) {
