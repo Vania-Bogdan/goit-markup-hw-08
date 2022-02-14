@@ -771,6 +771,13 @@ img {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .skills__title {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .skills__text {
   font-weight: normal;
   font-size: 14px;
@@ -1349,10 +1356,17 @@ img {
 }
 
 .portfolio-content {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-content {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .buttons-list {
